@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.so
+*.o
+build/
+dist/
+*.egg-info/
+datasets/
+checkpoints/
+*.pth
+*.pickle
+wandb/
+.ipynb_checkpoints/
