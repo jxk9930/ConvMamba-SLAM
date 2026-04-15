@@ -32,9 +32,9 @@ class RGBDDataset(data.Dataset):
 
         # building dataset is expensive, cache so only needs to be performed once
         cur_path = osp.dirname(osp.abspath(__file__))
-        if not os.path.isdir(osp.join(cur_path, 'cache')):
-            os.mkdir(osp.join(cur_path, 'cache'))
-        
+        # if not os.path.isdir(osp.join(cur_path, 'cache')):
+        #    os.mkdir(osp.join(cur_path, 'cache'))
+        os.makedirs(osp.join(cur_path, 'cache'), exist_ok=True)
         cache_path = osp.join(cur_path, 'cache', '{}.pickle'.format(self.name))
 
         if osp.isfile(cache_path):
