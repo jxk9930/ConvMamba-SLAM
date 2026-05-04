@@ -135,7 +135,8 @@ class ConvMamba(nn.Module):
             self.output_proj = nn.Conv2d(d_model, h_planes, 1, bias=False)
         else:
             self.output_proj = nn.Identity()
-
+	# New: LayerScale for bounded residual
+        self.gamma = nn.Parameter(torch.ones(h_planes))
         # Initialize Mamba weights
         self.apply(partial(_init_weights, n_layer=4))
 
@@ -180,6 +181,6 @@ class ConvMamba(nn.Module):
         out = self.output_proj(out)
 
         # Residual connection with the previous hidden state
-        net_new = net + out
+        net_new = net + self.gamma.view(1, -1, 1, 1) * out
 
         return net_new
