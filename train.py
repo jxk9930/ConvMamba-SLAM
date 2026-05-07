@@ -1,6 +1,6 @@
 import sys
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "droid_slam"))
 import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "droid_slam"))
 import cv2
 import numpy as np
 from collections import OrderedDict
