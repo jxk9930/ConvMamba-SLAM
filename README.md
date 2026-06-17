@@ -3,6 +3,7 @@
 An independent research project focused on evaluating and integrating **Mamba-based global context** into the **DROID-SLAM** framework. This study investigates the trade-offs between dense geometric structures and state-space model (SSM) mechanisms for visual odometry.
 
 This research was conducted at the **Dynamic Networks and Control Laboratory, The University of Texas at Arlington**.
+[Technical Report](https://docs.google.com/document/d/1giuahEChxRSitdeoxDgO_9MUZU-1v-hC/edit#heading=h.33nsoo122uwy)
 
 ## 📌 Key Frameworks & Methodology
 
